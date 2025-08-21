@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Tiktok</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://www.tiktok.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+            color: #161616;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .login-container {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body class="bg-white flex flex-col min-h-screen">
+    <header class="flex justify-between items-center p-4 border-b border-gray-200">
+        <div class="flex items-center">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/tiktok-icon.png" alt="TikTok Logo" class="h-6 w-auto mr-2">
+            <h1 class="text-xl font-bold">TikTok</h1>
+        </div>
+        <a href="#" class="flex items-center space-x-1 text-gray-500 hover:text-gray-700">
+            <span class="material-symbols-outlined text-base">help</span>
+            <span>Feedback and help</span>
+        </a>
+    </header>
+    <div class="login-container flex flex-col items-center justify-center p-6">
+        <div class="w-full max-w-md bg-white p-8 rounded-lg">
+            <h2 class="text-2xl font-bold text-center mb-2">Log in to TikTok</h2>
+            <p class="text-center text-gray-500 mb-6">Manage your account, check notifications, comment on videos, and more.</p>
+            <div class="space-y-4">
+                <button class="relative w-full text-center py-3 px-4 border border-gray-300 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+                    <span class="absolute left-4 top-1/2 transform -translate-y-1/2 flex items-center">
+                        <span class="material-symbols-outlined h-5 w-5">qr_code</span>
+                    </span>
+                    <span>Use QR code</span>
+                </button>
+                <button class="relative w-full text-center py-3 px-4 border border-gray-300 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+                    <span class="absolute left-4 top-1/2 transform -translate-y-1/2 flex items-center">
+                        <span class="material-symbols-outlined h-5 w-5">person</span>
+                    </span>
+                    <span>Use phone / email / username</span>
+                </button>
+                <button class="relative w-full text-center py-3 px-4 border border-gray-300 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+                    <span class="absolute left-4 top-1/2 transform -translate-y-1/2 flex items-center">
+                        <img src="https://www.facebook.com/favicon.ico" alt="Facebook Logo" class="h-5 w-5">
+                    </span>
+                    <span>Continue with Facebook</span>
+                </button>
+                <button class="relative w-full text-center py-3 px-4 border border-gray-300 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+                    <span class="absolute left-4 top-1/2 transform -translate-y-1/2 flex items-center">
+                        <img src="https://www.google.com/favicon.ico" alt="Google Logo" class="h-5 w-5">
+                    </span>
+                    <span>Continue with Google</span>
+                </button>
+                <button class="relative w-full text-center py-3 px-4 border border-gray-300 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+                    <span class="absolute left-4 top-1/2 transform -translate-y-1/2 flex items-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1377/1377229.png" alt="LINE Logo" class="h-5 w-5">
+                    </span>
+                    <span>Continue with LINE</span>
+                </button>
+                <button class="relative w-full text-center py-3 px-4 border border-gray-300 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+                    <span class="absolute left-4 top-1/2 transform -translate-y-1/2 flex items-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3669/3669973.png" alt="KakaoTalk Logo" class="h-5 w-5">
+                    </span>
+                    <span>Continue with KakaoTalk</span>
+                </button>
+                <button class="relative w-full text-center py-3 px-4 border border-gray-300 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+                    <span class="absolute left-4 top-1/2 transform -translate-y-1/2 flex items-center">
+                        <img src="https://www.apple.com/favicon.ico" alt="Apple Logo" class="h-5 w-5">
+                    </span>
+                    <span>Continue with Apple</span>
+                </button>
+            </div>
+            <p class="text-xs text-center text-gray-400 mt-6">
+                By continuing, you agree to TikTok's <a href="#" class="text-gray-500 hover:underline">Terms of Service</a> and confirm that you have read TikTok's <a href="#" class="text-gray-500 hover:underline">Privacy Policy</a>.
+            </p>
+        </div>
+    </div>
+    <p class="text-center mb-4">Don’t have an account? <a href="#" class="text-red-500 hover:underline font-semibold">Sign up</a></p>
+    <footer class="bg-black text-gray-400 text-xs py-8 px-6 flex flex-col items-center">
+        <div class="w-full flex justify-between items-center space-y-4">
+            <span>English (US)</span>
+            <span>© 2024 TikTok</span>
+        </div>
+    </footer>
+</body>
+</html>
