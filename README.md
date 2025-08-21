@@ -7,3 +7,4 @@
 | [Spotify](https://github.com/CtorW/Social-media-Front-End-Template/tree/uno/Social%20Media%20Login%20Template/Spotify.html) | | |
 | [Tiktok](https://github.com/CtorW/Social-media-Front-End-Template/tree/uno/Social%20Media%20Login%20Template/Tiktok.html) | | |
 | [Messenger](https://github.com/CtorW/Social-media-Front-End-Template/tree/uno/Social%20Media%20Login%20Template/Messenger.html) | | |
+| [LinkedIn](https://github.com/CtorW/Social-media-Front-End-Template/tree/uno/Social%20Media%20Login%20Template/LinkedIn.html) | | |
