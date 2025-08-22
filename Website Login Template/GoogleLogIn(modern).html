@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+░█████╗░████████╗░█████╗░██████╗░░██╗░░░░░░░██╗██╗░██╗██████╗░░█████╗░██████╗░███████╗
+██╔══██╗╚══██╔══╝██╔══██╗██╔══██╗░██║░░██╗░░██║╚═╝██╔╝╚════██╗██╔══██╗╚════██╗██╔════╝
+██║░░╚═╝░░░██║░░░██║░░██║██████╔╝░╚██╗████╗██╔╝░░██╔╝░░░███╔═╝██║░░██║░░███╔═╝██████╗░
+██║░░██╗░░░██║░░░██║░░██║██╔══██╗░░████╔═████║░░██╔╝░░██╔══╝░░██║░░██║██╔══╝░░╚════██╗
+╚█████╔╝░░░██║░░░╚█████╔╝██║░░██║░░╚██╔╝░╚██╔╝░██╔╝██╗███████╗╚█████╔╝███████╗██████╔╝
+░╚════╝░░░░╚═╝░░░░╚════╝░╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝░╚═╝╚══════╝░╚════╝░╚══════╝╚═════╝░
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in - Google Accounts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/720/720255.png" type="image/x-icon">
+    <style>
+        @font-face {
+            font-family: 'googlesans';
+            src: url(/fonts/googlesans.ttf);
+        }
+
+        body {
+            font-family: 'googlesans', sans-serif;
+            background-color: #202124;
+            color: #e8eaed;
+        }
+
+        .input-container {
+            position: relative;
+        }
+        
+
+        .input-container input {
+            padding: 1rem 0.75rem;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .input-container label {
+            position: absolute;
+            left: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all 0.2s ease-in-out;
+            pointer-events: none;
+            background-color: #0E0E0F;
+            padding: 0 0.25rem;
+        }
+
+        .input-container input:focus + label,
+        .input-container input:not(:placeholder-shown) + label {
+            top: 0;
+            font-size: 0.75rem;
+            color: #3b82f6;
+        }
+        
+        .input-container input:focus {
+            border-color: #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-[#202124] text-gray-200 flex flex-col items-center justify-center min-h-screen p-4">
+    <div class="w-full max-w-4xl flex flex-col bg-[#0E0E0F] p-8 rounded-2xl shadow-xl">
+        <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/2 flex flex-col items-start p-4 md:p-8">
+                <div class="flex items-center justify-center h-12 w-12 mb-9">
+                    <img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-icon-png-transparent-background-osteopathy-16.png" alt="Google Logo"></img>
+                </div>
+                <h1 class="text-5xl text-white font-medium">Sign in</h1>
+                <p class="text-sm text-gray-400 mt-2">Use your Google Account</p>
+            </div>
+            <div class="md:w-1/2 flex flex-col justify-start p-4 md:p-8">
+                <form class="space-y-6">
+                    <section id="step1">
+                        <div class="input-container w-full relative">
+                            <input type="email" id="email-input" class="w-full bg-transparent text-gray-200 rounded-lg border border-white focus:outline-none" placeholder=" ">
+                            <label for="email-input" class="absolute left-3 top-1/2 text-gray-400">Email or phone</label>
+                        </div>
+                        <div>
+                            <a href="#" class="text-[#A6BFE9] text-sm font-medium hover:bg-gray-800 hover:rounded-full">Forgot email?</a>
+                            <p class="text-xs text-gray-500 mt-4">Not your computer? Use a guest mode to sign in privately. <a href="#" class="text-[#A6BFE9] font-medium hover:underline">Learn more</a> about using Guest mode</p>
+                        </div>
+                        <div class="flex justify-end items-center mt-8 space-x-4">
+                            <a href="#" class="text-[#A6BFE9] font-medium hover:bg-[#141517] px-4 py-2 rounded-full transition-colors duration-200">Create Account</a>
+                            <button type="button" id="nextBtn" class="bg-[#B3C8EB] text-[#0F2F64] font-bold px-6 py-2 rounded-full hover:bg-[#B3C8EB] hover:text-[#17366A] transition-colors duration-200">Next</button>
+                        </div>
+                    </section>
+                    <section id="step2" style="display:none;">
+                        <div class="flex flex-col items-center justify-center">
+                            <h2 class="text-xl text-white font-medium mb-2">Welcome back!</h2>
+                            <h3 class="text-lg text-gray-400 mb-4" id="displayedEmail"></h3>
+                        </div>
+                        <div class="input-container w-full relative">
+                            <input type="password" id="password-input" class="w-full bg-transparent text-gray-200 rounded-lg border border-white focus:outline-none" placeholder=" ">
+                            <label for="password-input" class="absolute left-3 top-1/2 text-gray-400">Password</label>
+                        </div>
+                        <div class="flex justify-end items-center mt-8 space-x-4">
+                            <a href="#" class="text-[#A6BFE9] font-medium hover:bg-[#141517] px-4 py-2 rounded-full transition-colors duration-200">Forgot password?</a>
+                            <button type="button" id="nextBtn" class="bg-[#B3C8EB] text-[#0F2F64] font-bold px-6 py-2 rounded-full hover:bg-[#B3C8EB] hover:text-[#17366A] transition-colors duration-200">Next</button>
+                        </div>
+                    </section>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="w-full max-w-4xl flex justify-between items-center mt-4 p-4">
+        <a href="#" class="text-xs text-gray-500 hover:underline">English (United States)</a>
+        <div class="flex space-x-4">
+            <a href="#" class="text-xs text-gray-500 hover:underline">Help</a>
+            <a href="#" class="text-xs text-gray-500 hover:underline">Privacy</a>
+            <a href="#" class="text-xs text-gray-500 hover:underline">Terms</a>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const step1 = document.getElementById('step1');
+            const step2 = document.getElementById('step2');
+            const nextBtn = document.getElementById('nextBtn');
+            const backBtn = document.getElementById('backBtn');
+            const emailInput = document.getElementById('email-input');
+            const displayedEmail = document.getElementById('displayedEmail');
+
+            nextBtn.addEventListener('click', () => {
+                displayedEmail.textContent = emailInput.value;
+                step1.style.display = 'none';
+                step2.style.display = 'block';
+            });
+
+            backBtn.addEventListener('click', () => {
+                step2.style.display = 'none';
+                step1.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
